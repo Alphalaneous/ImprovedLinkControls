@@ -24,6 +24,7 @@ class $modify(MyEditorUI, EditorUI) {
 
 		m_fields->m_toggleLinkBtn = CCMenuItemToggler::create(toggleLinkSpriteOff, toggleLinkSpriteOn, this, menu_selector(MyEditorUI::onToggleLink));
 		m_fields->m_toggleLinkBtn->setID("link-controls-toggle"_spr);
+		m_fields->m_toggleLinkBtn->toggle(m_stickyControlsEnabled);
 		
 		if (CCNode* linkMenu = getChildByID("link-menu")) {
 			if (AxisLayout* layout = typeinfo_cast<AxisLayout*>(linkMenu->getLayout())) {
