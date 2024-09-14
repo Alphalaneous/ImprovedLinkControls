@@ -96,7 +96,7 @@ class $modify(MyEditorUI, EditorUI) {
 
 		bool allLinked = false;
 		
-		if (objects->count() > 1){
+		if (objects->count() > 1) {
 			allLinked = true;
 			int linkedGroup = static_cast<GameObject*>(objects->objectAtIndex(0))->m_linkedGroup;
 			if (linkedGroup == 0) allLinked = false;
@@ -115,8 +115,8 @@ class $modify(MyEditorUI, EditorUI) {
     void showUI(bool show) {
 		EditorUI::showUI(show);
 		m_fields->m_toggleLinkBtn->setVisible(show);
+		if (show) forceLinkVisible();
 	}
-
 
     void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1) {
 		EditorUI::ccTouchEnded(p0, p1);
