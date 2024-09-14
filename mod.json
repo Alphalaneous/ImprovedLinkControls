@@ -1,0 +1,31 @@
+{
+	"geode": "3.4.0",
+	"gd": {
+		"win": "2.206",
+		"android": "2.206",
+		"mac": "2.206",
+		"ios": "2.206"
+	},
+	"id": "alphalaneous.improvedlink",
+	"name": "Improved Link Controls",
+	"version": "v1.0.0",
+	"developer": "Alphalaneous",
+	"description": "Improves link controls!",
+	"resources": {
+		"sprites": [
+			"resources/*.png"
+		]
+	},
+	"dependencies": [
+        {
+            "id": "geode.node-ids",
+            "version": ">=v1.13.0",
+            "importance": "required"
+        }
+    ],
+	"links": {
+        "homepage": "https://twitter.com/alphalaneous",
+        "source": "https://github.com/Alphalaneous/ImprovedLinkControls",
+        "community": "https://discord.gg/Txn2CA5dHF"
+    }
+}
