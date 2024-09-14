@@ -22,7 +22,7 @@ class $modify(MyEditorUI, EditorUI) {
 		CCSprite* toggleLinkSpriteOn = CCSprite::create("toggleLink-on.png"_spr);
 		CCSprite* toggleLinkSpriteOff = CCSprite::create("toggleLink-off.png"_spr);
 
-		m_fields->m_toggleLinkBtn = CCMenuItemToggler::create(toggleLinkSpriteOn, toggleLinkSpriteOff, this, menu_selector(MyEditorUI::onToggleLink));
+		m_fields->m_toggleLinkBtn = CCMenuItemToggler::create(toggleLinkSpriteOff, toggleLinkSpriteOn, this, menu_selector(MyEditorUI::onToggleLink));
 		m_fields->m_toggleLinkBtn->setID("link-controls-toggle"_spr);
 		
 		if (CCNode* linkMenu = getChildByID("link-menu")) {
