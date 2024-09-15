@@ -51,12 +51,6 @@ class $modify(MyEditorUI, EditorUI) {
 		return true;
 	}
 
-    void keyDown(cocos2d::enumKeyCodes p0) {
-		EditorUI::keyDown(p0);
-		forceLinkVisible();
-		m_fields->m_toggleLinkBtn->toggle(m_stickyControlsEnabled);
-	}
-
 	void forceLinkVisible() {
 		m_linkBtn->setVisible(true);
 		m_unlinkBtn->setVisible(true);
