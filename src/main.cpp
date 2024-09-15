@@ -8,6 +8,7 @@ class $modify(MyEditorUI, EditorUI) {
 
 	struct Fields {
 		CCMenuItemToggler* m_toggleLinkBtn;
+		bool m_playtesting = false;
 	};
 
 	static void onModify(auto& self) {
@@ -51,9 +52,34 @@ class $modify(MyEditorUI, EditorUI) {
 		return true;
 	}
 
+	void onPlaytest(cocos2d::CCObject* sender) {
+        EditorUI::onPlaytest(sender);
+        m_fields->m_playtesting = true;
+    }
+
+    void onStopPlaytest(cocos2d::CCObject* sender) {
+        EditorUI::onStopPlaytest(sender);
+        m_fields->m_playtesting = false;
+    }
+
+	void keyDown(cocos2d::enumKeyCodes p0) {
+		EditorUI::keyDown(p0);
+		if (!m_fields->m_playtesting || getChildByID("position-slider")->isVisible()) {
+			forceLinkVisible();
+			m_fields->m_toggleLinkBtn->toggle(m_stickyControlsEnabled);
+		}
+		else {
+			forceLinkInvisible();
+		}
+	}
+
 	void forceLinkVisible() {
 		m_linkBtn->setVisible(true);
 		m_unlinkBtn->setVisible(true);
+	}
+	void forceLinkInvisible() {
+		m_linkBtn->setVisible(false);
+		m_unlinkBtn->setVisible(false);
 	}
 
 	void disableLinkButtons(bool enabled) {

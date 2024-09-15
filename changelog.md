@@ -1,3 +1,6 @@
+# 1.0.4
+- Fix link controls not toggling when using keybinds
+
 # 1.0.3
 - Fix link controls being visible during playtest if you use keybinds
 
