@@ -1,4 +1,8 @@
 # 1.0.4
+- Fix link controls position on < 16:9 displays
+- Fix a crash
+
+# 1.0.4
 - Fix link controls not toggling when using keybinds
 
 # 1.0.3

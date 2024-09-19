@@ -32,10 +32,12 @@ class $modify(MyEditorUI, EditorUI) {
 				layout->setGap(0);
 			}
 
+			CCSize winSize = CCDirector::get()->getWinSize();
+			linkMenu->setContentHeight(100);
 			linkMenu->setScale(0.8f * linkMenu->getScale());
-			linkMenu->setContentHeight(110);
 			linkMenu->setPositionX(linkMenu->getPositionX() - 3);
-			linkMenu->setPositionY(linkMenu->getPositionY() - 1);
+			linkMenu->setPositionY(winSize.height - 135);
+			linkMenu->setAnchorPoint({0, 1});
 			linkMenu->addChild(m_fields->m_toggleLinkBtn);
 			linkMenu->updateLayout();
 		}
@@ -154,7 +156,12 @@ class $modify(MyEditorUI, EditorUI) {
 class $modify(MyEditorPauseLayer, EditorPauseLayer) {
 
     void onResume(cocos2d::CCObject* sender) {
+		forceLinkVisible();
 		EditorPauseLayer::onResume(sender);
-		static_cast<MyEditorUI*>(m_editorLayer->m_editorUI)->forceLinkVisible();
+	}
+
+	void forceLinkVisible() {
+		m_editorLayer->m_editorUI->m_linkBtn->setVisible(true);
+		m_editorLayer->m_editorUI->m_unlinkBtn->setVisible(true);
 	}
 };
