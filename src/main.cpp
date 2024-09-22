@@ -158,12 +158,9 @@ class $modify(MyEditorUI, EditorUI) {
 class $modify(MyEditorPauseLayer, EditorPauseLayer) {
 
     void onResume(cocos2d::CCObject* sender) {
-		forceLinkVisible();
 		EditorPauseLayer::onResume(sender);
-	}
-
-	void forceLinkVisible() {
-		m_editorLayer->m_editorUI->m_linkBtn->setVisible(true);
-		m_editorLayer->m_editorUI->m_unlinkBtn->setVisible(true);
+		EditorUI* editorUI = EditorUI::get();
+		editorUI->m_linkBtn->setVisible(true);
+		editorUI->m_unlinkBtn->setVisible(true);
 	}
 };
