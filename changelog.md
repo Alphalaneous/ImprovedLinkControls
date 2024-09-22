@@ -1,3 +1,6 @@
+# 1.0.8
+- Fix positioning without using BetterEdit
+
 # 1.0.7
 - Fix button visibility when pausing
 

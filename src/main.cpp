@@ -36,9 +36,9 @@ class $modify(MyEditorUI, EditorUI) {
 				linkMenu->setContentHeight(100);
 				float origScale = linkMenu->getScale();
 				linkMenu->setScale(0.8f * linkMenu->getScale());
-				linkMenu->setPositionX(linkMenu->getPositionX() - 3);
+				linkMenu->setPositionX(zoomMenu->getPositionX() + 38 * origScale);
 				linkMenu->setPositionY(zoomMenu->getPositionY() + 2);
-				linkMenu->setAnchorPoint({0, 0.5});
+				linkMenu->setAnchorPoint(zoomMenu->getAnchorPoint());
 				linkMenu->addChild(m_fields->m_toggleLinkBtn);
 				linkMenu->updateLayout();
 			}
