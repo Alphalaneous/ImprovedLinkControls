@@ -31,15 +31,17 @@ class $modify(MyEditorUI, EditorUI) {
 			if (AxisLayout* layout = typeinfo_cast<AxisLayout*>(linkMenu->getLayout())) {
 				layout->setGap(0);
 			}
-
-			CCSize winSize = CCDirector::get()->getWinSize();
-			linkMenu->setContentHeight(100);
-			linkMenu->setScale(0.8f * linkMenu->getScale());
-			linkMenu->setPositionX(linkMenu->getPositionX() - 3);
-			linkMenu->setPositionY(winSize.height - 135);
-			linkMenu->setAnchorPoint({0, 1});
-			linkMenu->addChild(m_fields->m_toggleLinkBtn);
-			linkMenu->updateLayout();
+			if (CCNode* zoomMenu = getChildByID("zoom-menu")) {
+				CCSize winSize = CCDirector::get()->getWinSize();
+				linkMenu->setContentHeight(100);
+				float origScale = linkMenu->getScale();
+				linkMenu->setScale(0.8f * linkMenu->getScale());
+				linkMenu->setPositionX(linkMenu->getPositionX() - 3);
+				linkMenu->setPositionY(zoomMenu->getPositionY() + 2);
+				linkMenu->setAnchorPoint({0, 0.5});
+				linkMenu->addChild(m_fields->m_toggleLinkBtn);
+				linkMenu->updateLayout();
+			}
 		}
 		
 		handleTouchPriority(this);

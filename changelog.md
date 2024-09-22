@@ -1,4 +1,7 @@
-# 1.0.4
+# 1.0.6
+- Fix positioning if using BetterEdit UI scale
+
+# 1.0.5
 - Fix link controls position on < 16:9 displays
 - Fix a crash
 
