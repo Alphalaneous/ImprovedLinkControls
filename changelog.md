@@ -1,3 +1,9 @@
+# 1.0.10
+- Attempt to fix button unresponsiveness
+
+# 1.0.9
+- 2.2074 Port
+
 # 1.0.8
 - Fix positioning without using BetterEdit
 

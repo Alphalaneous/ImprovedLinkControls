@@ -12,7 +12,7 @@ class $modify(MyEditorUI, EditorUI) {
 	};
 
 	static void onModify(auto& self) {
-        (void) self.setHookPriority("EditorUI::init", -1024);
+        (void) self.setHookPriority("EditorUI::init", -1500);
     }
 
 	bool init(LevelEditorLayer* lel) {
@@ -66,6 +66,17 @@ class $modify(MyEditorUI, EditorUI) {
         m_fields->m_playtesting = false;
     }
 
+    void onGroupSticky(cocos2d::CCObject* sender) {
+        EditorUI::onGroupSticky(sender);
+		bool allLinked = verifyLinked(m_selectedObjects);
+		if (allLinked) {
+			m_unlinkBtn->setColor({255, 255, 255});
+			m_unlinkBtn->setOpacity(255);
+		}
+		m_unlinkBtn->setEnabled(allLinked);
+	}
+
+
 	void keyDown(cocos2d::enumKeyCodes p0) {
 		EditorUI::keyDown(p0);
 		if (!m_fields->m_playtesting || getChildByID("position-slider")->isVisible()) {
@@ -107,7 +118,7 @@ class $modify(MyEditorUI, EditorUI) {
 			}
 			m_unlinkBtn->setEnabled(allLinked);
 		}
-	}	
+	}
 
 	void onToggleLink(CCObject* obj) {
 		toggleStickyControls(!m_stickyControlsEnabled);
