@@ -3,11 +3,11 @@
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
-		"ios": "2.2074"
+		"mac": "2.2074"
 	},
 	"id": "alphalaneous.improvedlink",
 	"name": "Improved Link Controls",
-	"version": "v1.0.10",
+	"version": "v1.0.11",
 	"developer": "Alphalaneous",
 	"description": "Improves link controls!",
 	"resources": {

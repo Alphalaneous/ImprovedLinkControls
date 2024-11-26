@@ -1,3 +1,7 @@
+# 1.0.11
+- Remove Android32 Support
+- Bring back mac support
+
 # 1.0.10
 - Attempt to fix button unresponsiveness
 
