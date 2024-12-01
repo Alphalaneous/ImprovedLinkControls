@@ -1,3 +1,6 @@
+# 1.0.12
+- Android32 support is back!
+
 # 1.0.11
 - Remove Android32 Support
 - Bring back mac support
