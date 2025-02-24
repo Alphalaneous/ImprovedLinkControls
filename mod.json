@@ -1,5 +1,5 @@
 {
-	"geode": "4.0.1",
+	"geode": "4.2.0",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
@@ -7,7 +7,7 @@
 	},
 	"id": "alphalaneous.improvedlink",
 	"name": "Improved Link Controls",
-	"version": "v1.0.12",
+	"version": "v1.0.13",
 	"developer": "Alphalaneous",
 	"description": "Improves link controls!",
 	"resources": {
@@ -26,5 +26,8 @@
         "homepage": "https://linktr.ee/Alphalaneous",
         "source": "https://github.com/Alphalaneous/ImprovedLinkControls",
         "community": "https://discord.gg/Txn2CA5dHF"
-    }
+    },
+	"tags": [
+		"editor", "enhancement"
+	]
 }

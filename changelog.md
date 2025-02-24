@@ -1,3 +1,6 @@
+# 1.0.13
+- Add tags
+
 # 1.0.12
 - Android32 support is back!
 
