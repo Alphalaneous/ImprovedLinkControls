@@ -1,13 +1,14 @@
 {
-	"geode": "4.2.0",
+	"geode": "4.3.1",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
-		"mac": "2.2074"
+		"mac": "2.2074",
+		"ios": "2.2074"
 	},
 	"id": "alphalaneous.improvedlink",
 	"name": "Improved Link Controls",
-	"version": "v1.0.13",
+	"version": "v1.0.14",
 	"developer": "Alphalaneous",
 	"description": "Improves link controls!",
 	"resources": {
