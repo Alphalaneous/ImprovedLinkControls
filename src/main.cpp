@@ -89,8 +89,10 @@ class $modify(MyEditorUI, EditorUI) {
 	}
 
 	void forceLinkVisible() {
-		m_linkBtn->setVisible(true);
-		m_unlinkBtn->setVisible(true);
+		if (m_fields->m_toggleLinkBtn->isVisible()) {
+			m_linkBtn->setVisible(true);
+			m_unlinkBtn->setVisible(true);
+		}
 	}
 	void forceLinkInvisible() {
 		m_linkBtn->setVisible(false);

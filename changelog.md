@@ -1,3 +1,6 @@
+# 1.0.15
+- Fix link controls becoming visible when pressing a key on your keyboard when the UI is hidden
+
 # 1.0.14
 - iOS support
 
